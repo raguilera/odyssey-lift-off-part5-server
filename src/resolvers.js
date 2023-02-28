@@ -44,7 +44,12 @@ const resolvers = {
     modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getTrackModules(id);
     },
+
+    durationInSeconds: ({ lenght }) => lenght,
   },
+  Module: {
+    durationInSeconds: ({ lenght }) => lenght,
+  }
 };
 
 module.exports = resolvers;
